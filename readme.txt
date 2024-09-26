@@ -1,1 +1,0 @@
-ini dibuat oleh seseorang
