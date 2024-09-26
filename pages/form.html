@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bestTrip | Form For Your Destination</title>
+    <link rel="stylesheet" href="style-form.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="container">
+        <div id="navbar" class="flex">
+            <img src="/assets/icon/logo-navbar-dark.svg" alt="logo-navbar" class="logo-navbar">
+            <button class="btn-back"><img src="/assets/icon/icon-arrow.svg " width="30px"><a href="/index.html">Back to home</a></button>
+        </div>
+
+        <div id="container-form" class="flex">
+            <div class="from-side">
+                <h1 class="title">Form</h1>  
+                <p class="descibe">Temukan destinasi liburan sempurna dengan mengisi formulir ini. Beri tahu kami preferensi Anda, dan biarkan kami membantu Anda merencanakan perjalanan yang tak terlupakan.</p>
+                
+                <form id="form moodForm">
+                    <p class="flex">
+                        <input type="text" id="username" placeholder="Nama Anda" required autocomplete="off">
+                        <select class="form-control" id="mood" required autocomplete="off">
+                            <option value="">Pilih Mood</option>
+                            <option value="Santai">Santai</option>
+                            <option value="Petualangan">Petualangan</option>
+                            <option value="Budaya">Budaya</option>
+                            <option value="Alam">Alam</option>
+                            <option value="Pesta">Pesta</option>
+                        </select>
+                    </p>
+                    <p class="flex">
+                        <input type="text" id="location" placeholder="Kota/Negara Tujuan" required autocomplete="off">
+                    </p>
+                    <p class="flex">
+                        <input type="number" class="form-control" id="budget" required autocomplete="off" placeholder="Budget">
+                        <select class="form-control" id="cuaca" required autocomplete="off">
+                            <option value="">Pilih Cuaca</option>
+                            <option value="Cerah">Cerah</option>
+                            <option value="Dingin">Dingin</option>
+                            <option value="Hujan">Hujan</option>
+                            <option value="Bersalju">Bersalju</option>
+                        </select>
+                        <select class="form-control" id="transportasi" required autocomplete="off">
+                                <option value="">Pilih Transportasi</option>
+                                <option value="Mobil">Mobil</option>
+                                <option value="Motor">Motor</option>
+                                <option value="kapal">Kapal</option>
+                                <option value="Pesawat">Pesawat</option>
+                        </select>
+                    </p>
+                    <button  type="submit" class="submit-search" id="submit">Search</button>
+                </form>
+            </div>
+            <div class="result-side">
+                <h1>Hasil Pencarian: </h1>
+                <div class="result">
+                    <p id="resultText"></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <!-- Script JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.6/markdown-it.min.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+
+    <!-- AI Generator -->
+    <script type="module" src="index.js"></script>
+</body>
+</html>
